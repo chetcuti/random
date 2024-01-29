@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Randomizer</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.png')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='nomalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='jquery-1.6.2.min.js')}}"></script>
+</head>
+<body style="padding: 12px 0 0 27px;">
+<h3 style="margin: 10px 10px 10px 0;"><a href="/" style="color: #000000; text-decoration: none;">Randomizer</a></h3>
+<form method="POST">
+    <label># of Options</label><BR>
+    <input style="padding: 3px; margin-top: 3px;" id="options" name="options" placeholder="2" size="7" maxlength="4" value="{{ options }}" autofocus><BR>
+    <BR>
+    <label># of Rolls</label><BR>
+    <input style="padding: 4px; margin-top: 1px;" id="rolls" name="rolls" placeholder="100,000" size="7" maxlength="7" value="{{ rolls }}"><BR>
+    <BR>
+    <label for="details">Show full results?</label>
+    {% if details == 1 %}
+        <input id="details" type="checkbox" name="details" value="1" checked><BR>
+    {% else %}
+        <input id="details" type="checkbox" name="details" value="1"><BR>
+    {% endif %}
+    <BR>
+    <input type="submit" value="Randomize!" onclick="$('#loading').show();">
+    <div id="loading" style="display:none;"><img height="100px" width="100px" src="{{url_for('static', filename='spinner.gif')}}"></div>
+</form>
+
+{% if result %}
+    <p style="padding: 5px 0 0 0;">{{ result|safe }}</p>
+{% endif %}
+
+<script src="{{url_for('static', filename='modernizr-3.11.2.min.js')}}"></script>
+<script src="{{url_for('static', filename='plugins.js')}}"></script>
+</body>
+</html>
