@@ -1,16 +1,1 @@
-# Flask
-instance/
-.webassets-cache
-
-# Environment
-.env
-.venv
-env/
-venv/
-ENV/
-
-# Python
-__pycache__/
-__pypackages__/
-*.py[cod]
-*$py.class
+/services/web/project/templates/custom.headers

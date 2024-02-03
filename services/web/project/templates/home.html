@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='nomalize.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
     <script type="text/javascript" src="{{url_for('static', filename='jquery-1.6.2.min.js')}}"></script>
+    {% include 'custom.headers' ignore missing %}
 </head>
 <body style="padding: 12px 0 0 27px;">
 <h3 style="margin: 10px 10px 10px 0;"><a href="/" style="color: #000000; text-decoration: none;">Randomizer</a></h3>
