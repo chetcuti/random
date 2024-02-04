@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Randomizer</title>
+    <title>Random</title>
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='favicon.png')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='nomalize.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
@@ -8,7 +8,7 @@
     {% include 'custom.headers' ignore missing %}
 </head>
 <body style="padding: 12px 0 0 27px;">
-<h3 style="margin: 10px 10px 10px 0;"><a href="/" style="color: #000000; text-decoration: none;">Randomizer</a></h3>
+<h3 style="margin: 10px 10px 10px 0;"><a href="/" style="color: #000000; text-decoration: none;">Random</a></h3>
 <form method="POST">
     <label># of Options</label><BR>
     <input style="padding: 3px; margin-top: 3px;" id="options" name="options" placeholder="2" size="7" maxlength="4" value="{{ options }}" autofocus><BR>

@@ -1,5 +1,5 @@
-Randomizer
-----------
+Random
+------
 
 ## Installation
 
